@@ -1,0 +1,6 @@
+.list-items {
+  width: 40%;
+}
+.list-group-item.tab {
+  cursor: pointer;
+}

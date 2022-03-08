@@ -1,0 +1,23 @@
+.block-content {
+  background-color: rgb(82, 76, 76);
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.header-img {
+  margin: 20px;
+}
+
+.list-items {
+  margin: 20px;
+}
+
+.img-container {
+  padding: 20px;
+}
+
+.img-container img {
+  display: block;
+  width: 200px;
+  border-radius: 5px;
+}
