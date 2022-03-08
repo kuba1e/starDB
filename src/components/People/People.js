@@ -1,7 +1,7 @@
 import { React, Component, Fragment } from "react";
 import "./People.css";
 
-import F from "../item-list";
+import withData from "../item-list";
 import ItemDetails from "../item-details";
 import ErrorIndicator from "../error-indicator";
 import SwapiService from "../../services/swapi-service";
@@ -72,7 +72,7 @@ const PeopleInfo = (props) => {
 
   return (
     <Fragment>
-      <F
+      <withData
         onItemsSelected={onPersonSelected}
         getData={getData}
         renderItem={props.children}
