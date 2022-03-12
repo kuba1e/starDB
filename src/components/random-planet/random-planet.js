@@ -3,8 +3,7 @@ import "./random-planet.css";
 
 import SwapiService from "../../services/swapi-service";
 import Spinner from "../spinner";
-import { ErrorBoundry } from "../People/People";
-
+import { ErrorBoundry } from "../error-indicator";
 class RandomPlanet extends Component {
   swapi = new SwapiService();
 
@@ -19,8 +18,6 @@ class RandomPlanet extends Component {
     this.interval = setInterval(this.updatePlanet, 4000);
   }
 
-  componentWillUnmount() {
-  }
 
   onError = (error) => {
     this.setState({

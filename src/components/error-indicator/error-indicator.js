@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import './error-indicator.css'
 
 const ErrorIndicator = (props)=>{
@@ -16,4 +16,21 @@ const ErrorIndicator = (props)=>{
   )
 }
 
-export default ErrorIndicator
+class ErrorBoundry extends Component {
+  state = {
+    error: false
+  }
+
+  componentDidCatch(error){
+    this.setState({error})
+  }
+
+  render(){
+    if(this.state.error){
+      return <ErrorIndicator message={this.state.error}/>
+    }
+    return this.props.children
+  }
+}
+
+export {ErrorIndicator, ErrorBoundry}

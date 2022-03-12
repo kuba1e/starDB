@@ -1,2 +1,2 @@
-import withData from "./with-data";
-export default withData
+import WithData from "./with-data";
+export default WithData

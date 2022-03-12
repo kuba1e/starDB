@@ -1,17 +1,15 @@
-import { React, Component, Fragment } from "react";
+import { React, Fragment } from "react";
 import "./item-list.css";
-import { ErrorBoundry } from "../People/People";
-import SwapiService from "../../services/swapi-service";
-import withData from "../hoc-helpers";
+import { ErrorBoundry } from "../error-indicator";
 
 const ItemList = (props) =>{
     const itemList = 
       <Items
         people={props.data}
-        onItemsSelected={props.onItemsSelected}
-        renderItem={props.renderItem}
+        onItemsSelected={props.onItemSelected}
+        renderItem={props.children}
       />
-    
+
     return (
       <div className="list-items">
         <ErrorBoundry>{itemList}</ErrorBoundry>
@@ -27,7 +25,8 @@ const Items = ({ people, onItemsSelected, renderItem }) => {
       <li
         key={element.id}
         className="list-group-item tab"
-        onClick={() => onItemsSelected(element.id)}
+        onClick={() => {
+          onItemsSelected(element.id)}}
       >
         {content}
       </li>
@@ -42,6 +41,5 @@ const Items = ({ people, onItemsSelected, renderItem }) => {
   );
 };
 
-const {getAllPeople} = new SwapiService()
 
-export default withData(ItemList, getAllPeople);
+export default ItemList

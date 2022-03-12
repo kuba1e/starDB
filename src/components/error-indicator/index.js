@@ -1,2 +1,2 @@
-import ErrorIndicator from "./error-indicator";
-export default ErrorIndicator
+import {ErrorIndicator, ErrorBoundry} from "./error-indicator";
+export  {ErrorIndicator, ErrorBoundry}

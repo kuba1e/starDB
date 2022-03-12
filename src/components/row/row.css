@@ -1,0 +1,12 @@
+.left {
+  width: 100%;
+  padding-right: 50px;
+}
+.right {
+  width: 100%;
+  padding-left: 50px;
+}
+
+.list-items {
+  width: 100%;
+}

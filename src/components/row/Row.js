@@ -7,7 +7,7 @@ export default class Row extends Component {
     const { left, right } = this.props;
 
     return (
-      <div className="container">
+      <div className="container d-flex justify-content-between">
         <div className="left">{left}</div>
         <div className="right">{right}</div>
 
